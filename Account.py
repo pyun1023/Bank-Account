@@ -1,5 +1,5 @@
 class BankAccount:
-    def __init__(self, int_rate=0, balance = 0): 
+    def __init__(self, int_rate = 0, balance = 0): 
         self.int_rate = int_rate
         self.balance = balance
         
@@ -29,8 +29,15 @@ class BankAccount:
 Phil=BankAccount()
 Yun= BankAccount()
 
-Phil.deposit(100).deposit(100).deposit(100).withdraw(50).yield_interest(0.1)
-Yun.deposit(300).deposit(900).withdraw(50).withdraw(50).withdraw(50).withdraw(50).yield_interest(0.1)
+Phil.deposit(100).deposit(100).deposit(100).withdraw(50).yield_interest(.1)
+Yun.deposit(300).deposit(900).withdraw(50).withdraw(50).withdraw(50).withdraw(50).yield_interest(.1)
 
-# testing for overwithdrawal Me=BankAccount()
-# Me.deposit(10).withdraw(100)
+'''
+#testing for overwithdrawal
+Me=BankAccount()    
+Me.deposit(10).withdraw(100)
+
+#testing for yield interest 
+you=BankAccount() 
+you.yield_interest(1)
+'''
